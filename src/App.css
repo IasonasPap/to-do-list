@@ -1,18 +1,3 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -28,11 +13,22 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#title {
+  font-family: Bangers;
+  font-size: 80px;
 }
+#filter-list {
+  border-radius: 5px;
+  height: 4rem;
+  font-size: 1.5rem;
+}
+#to-do-list-item {
+  list-style-type: none;
+  border: thin solid white;
+  padding: 8px;
+}
+#list-item-id {
+  color: green;
+  margin-right: 15px;
+}
+
