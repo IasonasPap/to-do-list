@@ -9,19 +9,18 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
 #title {
   font-family: Bangers;
   font-size: 80px;
 }
+
 .to-do-list-container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 #filter-list {
   border-radius: 5px;
   height: 4rem;
@@ -34,7 +33,7 @@
   padding: 8px;
 }
 #list-item-id {
-  color: green;
+  color: #61dafb;
   margin-right: 15px;
 }
 
