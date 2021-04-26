@@ -13,7 +13,7 @@ class FilterList extends React.Component {
 
     render() {
       return (     
-        <input id="filter-list" type="text" onChange={this.filterList} />
+        <input id="filter-list" type="text" placeholder="Search for task..." onChange={this.filterList} />
       )
     }
   }

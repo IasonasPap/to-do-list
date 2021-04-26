@@ -26,11 +26,20 @@
   height: 4rem;
   font-size: 1.5rem;
   width:fit-content;
+  background-color: #4f535a;
+  color: white;
+}
+::placeholder {
+  color: white;
+  opacity: 0.7;
+  font-size: 1.3rem;
 }
 #to-do-list-item {
   list-style-type: none;
-  border: thin solid white;
+  border-bottom: thin solid white;
+  background-color: #4f535a;
   padding: 8px;
+  /* box-shadow: 0 4px 8px 0 rgba(156, 154, 154, 0.562), 0 6px 20px 0 rgba(0, 0, 0, 0); */
 }
 #list-item-id {
   color: #61dafb;

@@ -25,8 +25,8 @@ class App extends React.Component {
           <h1 id="title">
             To Do List
           </h1>
-          <FilterList onFilterListChange={this.changeFilterString}/>
-          <ToDoList filter={this.state.filter}/>
+            <FilterList onFilterListChange={this.changeFilterString}/>
+            <ToDoList filter={this.state.filter}/>
         </header>
       </div>
     )

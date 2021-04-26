@@ -24,12 +24,13 @@ class ToDoList extends React.Component {
   
     render() {
       console.log("render constructor");
+
       return (
         <ul className="to-do-list">
             {this.state.outputList.length === 0 
             ? null
             : this.state.outputList.filter(
-              (listItem) => JSON.stringify(listItem).includes(this.props.filter)
+              (listItem) => listItem.props.children[1].includes(this.props.filter)
             )
             }
         </ul>
