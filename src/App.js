@@ -1,6 +1,9 @@
-import './App.css';
 import React from 'react';
+
+import './App.css';
+
 import ToDoList from './ToDoList';
+
 import FilterList from './FilterList';
 
 class App extends React.Component {
@@ -25,8 +28,10 @@ class App extends React.Component {
           <h1 id="title">
             To Do List
           </h1>
-            <FilterList onFilterListChange={this.changeFilterString}/>
-            <ToDoList filter={this.state.filter}/>
+          <div className="to-do-list-container">
+          <FilterList onFilterListChange={this.changeFilterString}/>
+          <ToDoList filter={this.state.filter}/>
+          </div>
         </header>
       </div>
     )
