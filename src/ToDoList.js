@@ -15,9 +15,8 @@ class ToDoList extends React.Component {
       .then((response) => response.json())
       .then((json) => 
         this.setState({
-          outputList: json.map( ({id,title}) => 
-        <li id="to-do-list-item" key={id}><span id="list-item-id">{id}</span>{title}</li>
-        )})
+          outputList: json
+        })
       );    
     }
   
@@ -25,8 +24,11 @@ class ToDoList extends React.Component {
 
       return (
         <ul className="to-do-list">
-            {this.state.outputList.filter(
-                (listItem) => listItem.props.children[1].includes(this.props.filter)
+            {
+              this.state.outputList.filter(
+                  ({title}) => title.includes(this.props.filter)
+              ).map( ({id,title}) => 
+                <li id="to-do-list-item" key={id}><span id="list-item-id">{id}</span>{title}</li>
               )
             }
         </ul>
