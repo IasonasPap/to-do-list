@@ -1,14 +1,21 @@
 import React from 'react';
 
+import withFilterList from './withFilterList';
 import './App.css';
 
 class FilterList extends React.Component {
   
     render() {
+      const {onFilterListChange} = this.props;
       return (     
-        <input id="filter-list" type="text" placeholder="Search for task..." onChange={(event) => this.props.onFilterListChange(event.target.value)} />
+        <input 
+          id="filter-list" 
+          type="text" 
+          placeholder="Search for task..." 
+          onChange={(event) => onFilterListChange(event.target.value)} 
+        />
       )
     }
   }
 
-export default FilterList;
+export default withFilterList(FilterList);
