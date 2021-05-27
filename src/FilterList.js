@@ -1,6 +1,4 @@
 import React from 'react';
-
-import withFilterList from './withFilterList';
 import './App.css';
 
 class FilterList extends React.Component {
@@ -18,4 +16,4 @@ class FilterList extends React.Component {
     }
   }
 
-export default withFilterList(FilterList);
+export default FilterList;

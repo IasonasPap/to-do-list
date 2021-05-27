@@ -6,13 +6,11 @@ import './App.css';
 class ToDoList extends React.Component {    
   
     render() {
-      const {outputList, filter} = this.props;
+      const {outputList} = this.props;
       return (
         <ul className="to-do-list">
             {
-              outputList.filter(
-                  ({title}) => title.includes(filter)
-              ).map( ({id,title}) => 
+              outputList.map( ({id,title}) => 
                 <li id="to-do-list-item" key={id}><span id="list-item-id">{id}</span>{title}</li>
               )
             }
