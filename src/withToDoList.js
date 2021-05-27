@@ -2,7 +2,7 @@ import React from 'react';
 
 import './App.css';
 
-const withToDoListState = ToDoList => {
+const withToDoListState = Component => {
 
     class WithToDoListState extends React.Component {
         constructor(props) {
@@ -22,7 +22,7 @@ const withToDoListState = ToDoList => {
             );    
         }
         render() {
-            return <ToDoList outputList={this.state.outputList.filter(({title}) => title.includes(this.props.filter))}/>
+            return <Component outputList={this.state.outputList.filter(({title}) => title.includes(this.props.filter))}/>
         }
     }
 
