@@ -1,5 +1,6 @@
 import React from 'react';
-import './App.css';
+
+import './FilterList.css';
 
 class FilterList extends React.Component {
   

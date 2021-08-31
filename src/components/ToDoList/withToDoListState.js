@@ -1,15 +1,15 @@
 import React from 'react';
 
-import './App.css';
+import './ToDoList.css';
 
-const withToDoListState = Component => {
+const withToDoListState = (Component) => {
 
     class WithToDoListState extends React.Component {
         constructor(props) {
             super(props);
             this.state = {
                 outputList : []
-            }      
+            }
           }
         
         componentDidMount() {
@@ -22,7 +22,8 @@ const withToDoListState = Component => {
             );    
         }
         render() {
-            return <Component outputList={this.state.outputList.filter(({title}) => title.includes(this.props.filter))}/>
+            //pass all initial props and the new computed props 
+            return <Component {...this.props} outputList={this.state.outputList.filter(({title}) => title.includes(this.props.filter))}/>
         }
     }
 

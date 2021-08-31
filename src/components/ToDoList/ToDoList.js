@@ -1,7 +1,8 @@
 import React from 'react';
 
-import withToDoList from './withToDoList';
-import './App.css';
+import './ToDoList.css';
+
+import withToDoListState from './withToDoListState';
 
 class ToDoList extends React.Component {    
   
@@ -11,7 +12,7 @@ class ToDoList extends React.Component {
         <ul className="to-do-list">
             {
               outputList.map( ({id,title}) => 
-                <li id="to-do-list-item" key={id}><span id="list-item-id">{id}</span>{title}</li>
+                <li className="to-do-list-item" key={id}><span className="list-item-id">{id}</span>{title}</li>
               )
             }
         </ul>
@@ -19,4 +20,4 @@ class ToDoList extends React.Component {
     }
 }
   
-export default withToDoList(ToDoList);
+export default withToDoListState(ToDoList);

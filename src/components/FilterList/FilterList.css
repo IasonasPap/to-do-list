@@ -1,0 +1,13 @@
+#filter-list {
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 1.5rem;
+    background-color: #4f535a;
+    color: white;
+    margin: 55px 0 25px 0;
+  }
+  ::placeholder {
+    color: white;
+    opacity: 0.7;
+    font-size: 1.3rem;
+  }
