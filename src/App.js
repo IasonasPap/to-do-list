@@ -1,25 +1,40 @@
-import logo from './logo.svg';
+import React from 'react';
+
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import ToDoList from './components/ToDoList/ToDoList';
+import FilterList from './components/FilterList/FilterList';
+
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      filter: ""
+    }
+    this.changeFilterString = this.changeFilterString.bind(this);
+  }  
+  
+  changeFilterString(string) {    
+    this.setState(
+      { filter: string }
+    );
+  }
+
+  render() {
+    return (
+      <div className="app">
+          <h1 id="title">
+            To Do List
+          </h1>
+
+          <FilterList onFilterListChange={this.changeFilterString}/>
+          
+          <div className="to-do-list-container">
+            <ToDoList filter={this.state.filter}/>
+          </div>
+      </div>
+    )
+  }
 }
 
 export default App;
